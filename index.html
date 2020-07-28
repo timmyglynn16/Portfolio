@@ -19,11 +19,22 @@
 
 	<style>
 		p {font-size: 16px;}
-  		.margin {margin-bottom: 45px;}
+
+		.margin {margin-bottom: 45px;}
+		
+		.bg-1 { 
+    		background-color:#ffffff;  /* Dark Blue */
+			color: #474e5d;
+			height: 700px; 
+  		}
 		.bg-2 { 
     		background-color: #474e5d; /* Dark Blue */
     		color: #ffffff;
-  		}
+		}
+		.bg-3 {
+			background-color: #ffffff;
+			color: #474e5d
+		}
 		.container-fluid {
 		  padding-top: 70px !important;
 		  padding-bottom: 70px !important;
@@ -45,10 +56,10 @@
 <body>
 
 <!--NAVBAR-->
-<nav class="navbar navbar-default">
+<!-- <nav class="navbar navbar-centered">
 	<div class="container">
 	  <div class="navbar-header">
-		<a class="navbar-brand" href="#">Me</a>
+		<a class="navbar-brand" style="color: #1abc9c !important;" href="#/">TG</a>
 	  </div>
 	  <div class="navbar-header" id="myNavbar">
 		<ul class="nav navbar-nav navbar-right">
@@ -58,13 +69,42 @@
 		</ul>
 	  </div>
 	</div>
+  </nav> -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-2">
+	<a class="navbar-brand" href="#">TG</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarCollapse">
+	  <ul class="navbar-nav mr-auto">
+		<li class="nav-item active">
+		  <a class="nav-link" href="#about">About<span class="sr-only">(current)</span></a>
+		</li>
+		<li class="nav-item active">
+		  <a class="nav-link" href="#projects">Projects</a>
+		</li>
+		<li class="nav-item active">
+			<a class="nav-link" href="#contact">Contact</a>
+		  </li>
+	  </ul>
+	</div>
   </nav>
 
     <!--HOME-->
-	<div id="/" class="container-fluid text-center">
-        <div class="container centered">
+	<div id="/" class="container-fluid bg-1 text-center">
+        <div class="container centered" style="margin-top: 200px;">
+			<!-- <p>MORE CONTENT? REPLACE WITH SPACE</p>
+			<p>MORE CONTENT? REPLACE WITH SPACE</p>
+			<p>MORE CONTENT? REPLACE WITH SPACE</p>
+			<p>MORE CONTENT? REPLACE WITH SPACE</p>
+			<p>MORE CONTENT? REPLACE WITH SPACE</p> -->
             <h1 class="cover-heading">Who is <strong style="color: #1abc9c !important;">Timmy Glynn</strong></h1>
-            <p class="lead">Software Engineer | Web Designer | Blogger</p>
+			<p class="lead">Software Engineer | Web Designer | Blogger</p>
+			<!-- <p>MORE CONTENT? REPLACE WITH SPACE</p>
+			<p>MORE CONTENT? REPLACE WITH SPACE</p>
+			<p>MORE CONTENT? REPLACE WITH SPACE</p>
+			<p>MORE CONTENT? REPLACE WITH SPACE</p>
+			<p>MORE CONTENT? REPLACE WITH SPACE</p> -->
             <p class="lead">
             <a href="#about" class="btn btn-lg btn-secondary">Learn more</a>
             </p>
@@ -74,7 +114,12 @@
     <!--ABOUT-->
     <div id="about" class="container-fluid bg-2 text-center">
       <div class="container">
-		  <h1 class="cover-heading">About</h1>
+		  <h1 class="cover-heading" style="color: #1abc9c !important">About</h1>
+		  <div class="row">
+			  <div class="col-12">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			  </div>
+		  </div>
 		  <div class="row">
 			<div class="col-sm-6">
 				<h2>Test</h2>
@@ -93,9 +138,9 @@
     </div>
 
    <!--PROJECTS-->
-    <div id="projects" class="container-fluid text-center">
+    <div id="projects" class="container-fluid bg-3 text-center">
       <div class="container">
-		  <h1 class="cover-heading">Projects</h1>
+		  <h1 class="cover-heading" style="color: #1abc9c !important">Projects</h1>
 		  <div class="row">
 			<div class="col-sm-4">
 				<h2>Test</h2>
@@ -114,11 +159,17 @@
     </div>
 
     <!--FOOTER-->
-    <footer class="mastfoot mt-auto text-center">
+    <!-- <footer class="mastfoot mt-auto text-center bg-2">
       <div class="inner">
       <p>Created with <a style="color: #1abc9c !important;" href="https://getbootstrap.com/">Bootstrap</a>, Designed by <a style="color: #1abc9c !important;" href="https://github.com/timmyglynnv3">Timmy Glynn</a></p>
       </div>
-    </footer>
+	</footer> -->
+
+	<footer class="container-fluid bg-2 text-center">
+		<div class="inner">
+			<p>Created with <a style="color: #1abc9c !important;" href="https://getbootstrap.com/">Bootstrap</a>, Designed by <a style="color: #1abc9c !important;" href="https://github.com/timmyglynnv3">Timmy Glynn</a></p>
+		</div>
+	  </footer>
 
 
 </body>
