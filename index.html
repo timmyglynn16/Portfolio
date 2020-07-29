@@ -12,15 +12,38 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 	<style>
 		p {font-size: 16px;}
 
 		.margin {margin-bottom: 45px;}
-		
+		.bg-main {
+			background: repeating-linear-gradient(
+			45deg,
+			#1abc9c,
+			#1abc9c 2px,
+			#ffffff  2px,
+			#ffffff 125px
+			);
+			height: 700px; 
+		}
+		.bg-body {
+			background: repeating-linear-gradient(
+			45deg,
+			#1abc9c,
+			#1abc9c 2px,
+			#474e5d  2px,
+			#474e5d 125px
+			);
+		}
 		.bg-1 { 
     		background-color:#ffffff;  /* Dark Blue */
 			color: #474e5d;
-			height: 700px; 
   		}
 		.bg-2 { 
     		background-color: #474e5d; /* Dark Blue */
@@ -29,6 +52,35 @@
 		.bg-3 {
 			background-color: #ffffff;
 			color: #474e5d
+		}
+		.bg-4 {
+			/* background-color: #1abc9c */
+			background: repeating-linear-gradient(
+			135deg,
+			#ffffff,
+			#ffffff 2px,
+			#1abc9c  2px,
+			#1abc9c 125px
+			);
+		}
+		.bg-5 {
+			/* background-color: #1abc9c */
+			background: repeating-linear-gradient(
+			45deg,
+			#ffffff,
+			#ffffff 2px,
+			#1abc9c 2px,
+			#1abc9c 20px
+			);
+		}
+		.bg-6 {
+			background: repeating-linear-gradient(
+			45deg,
+			#1abc9c,
+			#1abc9c 2px,
+			#ffffff  2px,
+			#ffffff 125px
+			);
 		}
 		.container-fluid {
 		  padding-top: 70px !important;
@@ -51,7 +103,7 @@
 <body>
 
 <!--NAVBAR-->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-2">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-2 border border-bottom" style="border-color: #1abc9c !important; border-width:4px !important;">
 	<a class="navbar-brand" href="#">TG</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 	  <span class="navbar-toggler-icon"></span>
@@ -75,20 +127,24 @@
   </nav>
 
     <!--HOME-->
-	<div id="/" class="container-fluid bg-1 text-center">
-        <div class="container centered" style="margin-top: 200px;">
-            <h1 class="cover-heading">Who is <strong style="color: #1abc9c !important;">Timmy Glynn</strong></h1>
-			<p class="lead">Software Engineer | Web Designer | Blogger</p>
+	<div id="/" class="container-fluid bg-main text-center">
+        <div class="container centered border border-primary" style="max-width: 600px; margin-top: 175px; background-color: #ffffff; padding-top: 50px; padding-bottom: 50px; border-color: #1abc9c !important; border-width:2px !important;">
+            <h1 class="cover-heading" style="color: #474e5d !important;">Who is <strong style="color: #1abc9c !important;">Timmy Glynn</strong></h1>
+			<p class="lead" style="color: #474e5d !important;"><strong style="color: #1abc9c !important;">|</strong> Software Engineer <strong style="color: #1abc9c !important;">|</strong> Web Designer <strong style="color: #1abc9c !important;">|</strong> Blogger <strong style="color: #1abc9c !important;">|</strong> </p>
             <p class="lead">
             <a href="#about" class="btn btn-lg btn-secondary">Learn more</a>
             </p>
         </div>
-    </div>
+	</div>
+	
+	<!-- <div class="container-fluid bg-4">
 
-    <!--ABOUT-->
-    <div id="about" class="container-fluid bg-2 text-center">
-      <div class="container">
-		  <h1 class="cover-heading" style="color: #1abc9c !important">About</h1>
+    </div> -->
+
+	<!--ABOUT-->
+    <div id="about" class="container-fluid bg-2 text-center ">
+      <div class="container bg-2 border border-primary" style="padding-top: 50px; padding-bottom: 50px; border-color: #1abc9c !important; border-width:2px !important;">
+		  <h1 class="cover-heading" style="color: #1abc9c !important; padding-bottom: 50px;">About</h1>
 		  <div class="row">
 			  <div class="col-12">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -112,26 +168,30 @@
 			  </div>
 		  </div>
 		</div>
+	</div>
+	
+	<div class="container-fluid bg-4">
+
     </div>
 
    <!--PROJECTS-->
     <div id="projects" class="container-fluid bg-3 text-center">
       <div class="container">
-		  <h1 class="cover-heading" style="color: #1abc9c !important">Projects</h1>
+		  <h1 class="cover-heading" style="color: #1abc9c !important; padding-bottom: 50px;">Projects</h1>
 		  <div class="row">
-			<div class="col-sm-4">
+			<div class="col-sm-4 border-left border-right" style="border-color: #1abc9c !important; border-width:2px !important;">
 				<h2>Test</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			  </div>
-			  <div class="col-sm-4">
+			  <div class="col-sm-4" style="border-color: #1abc9c !important; border-width:2px !important;">
 				<h2>Test</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			  </div>
-			  <div class="col-sm-4">
+			  <div class="col-sm-4 border-left border-right" style="border-color: #1abc9c !important; border-width:2px !important;">
 				<h2>Test</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -141,10 +201,14 @@
         </div>
 	</div>
 
+	<div class="container-fluid bg-4">
+
+    </div>
+
     <!--CONTACT-->
     <div id="contact" class="container-fluid bg-2 text-center">
 		<div class="container">
-			<h1 class="cover-heading" style="color: #1abc9c !important">Contact</h1>
+			<h1 class="cover-heading" style="color: #1abc9c !important; padding-bottom: 50px;">Contact</h1>
 			<div class="row">
 			  <div class="col-sm-6">
 				  <h2>Test</h2>
