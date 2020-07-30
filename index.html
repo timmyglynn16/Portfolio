@@ -18,6 +18,36 @@
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+	<!--- custom JavaScript-->
+	<script type="text/javascript" src="jquery-3.3.1.js"></script>
+	<script src="public/js/custom.js"></script>
+
+	<script>
+		(function ($) {
+		$(document).ready(function(){
+			
+			// hide .navbar first
+			$(".navbar").hide();
+			
+			// fade in .navbar
+			$(function () {
+				$(window).scroll(function () {
+					// set distance user needs to scroll before we fadeIn navbar
+					if ($(this).scrollTop() > 700) {
+						$('.navbar').fadeIn();
+					} else {
+						$('.navbar').fadeOut();
+					}
+				});
+
+			
+			});
+
+		});
+		}(jQuery));
+
+	</script>
+
 	<style>
 		p {font-size: 16px;}
 
@@ -103,7 +133,7 @@
 <body>
 
 <!--NAVBAR-->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-2 border border-bottom" style="border-color: #1abc9c !important; border-width:4px !important;">
+  <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-2 border border-bottom" style="border-color: #1abc9c !important; border-width:4px !important;">
 	<a class="navbar-brand" href="#">TG</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 	  <span class="navbar-toggler-icon"></span>
@@ -128,7 +158,7 @@
 
     <!--HOME-->
 	<div id="/" class="container-fluid bg-main text-center">
-        <div class="container centered border border-primary" style="max-width: 600px; margin-top: 175px; background-color: #ffffff; padding-top: 50px; padding-bottom: 50px; border-color: #1abc9c !important; border-width:2px !important;">
+        <div class="container centered border border-primary" style="max-width: 600px; margin-top: 125px; background-color: #ffffff; padding-top: 50px; padding-bottom: 50px; border-color: #1abc9c !important; border-width:2px !important;">
             <h1 class="cover-heading" style="color: #474e5d !important;">Who is <strong style="color: #1abc9c !important;">Timmy Glynn</strong></h1>
 			<p class="lead" style="color: #474e5d !important;"><strong style="color: #1abc9c !important;">|</strong> Software Engineer <strong style="color: #1abc9c !important;">|</strong> Web Designer <strong style="color: #1abc9c !important;">|</strong> Blogger <strong style="color: #1abc9c !important;">|</strong> </p>
             <p class="lead">

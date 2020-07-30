@@ -1,10 +1,22 @@
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("nav").style.top = "0";
-  } else {
-    document.getElementById("nav").style.top = "-50px";
-  }
-  prevScrollpos = currentScrollPos;
-}
+(function ($) {
+  $(document).ready(function(){
+    
+	// hide .navbar first
+	$(".navbar").hide();
+	
+	// fade in .navbar
+	$(function () {
+		$(window).scroll(function () {
+            // set distance user needs to scroll before we fadeIn navbar
+			if ($(this).scrollTop() > 100) {
+				$('.navbar').fadeIn();
+			} else {
+				$('.navbar').fadeOut();
+			}
+		});
+
+	
+	});
+
+});
+  }(jQuery));
