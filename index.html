@@ -19,8 +19,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 	<!--- custom JavaScript-->
-	<script type="text/javascript" src="jquery-3.3.1.js"></script>
-	<script src="public/js/custom.js"></script>
+	<script src="public/js/custom.min.js"></script>
 
 	<script>
 		(function ($) {
@@ -45,6 +44,55 @@
 
 		});
 		}(jQuery));
+
+		$(document).ready(function(){
+			$('.intro').css('display', 'none');
+			$('.intro').fadeIn(4000)	
+		});
+
+		$(document).ready(function(){
+			$('#zoom-box').animate({
+			width:'500px',
+			height:'250px',
+			top:'0',
+			left:'0',
+			}, 500);
+		});
+
+		// function isScrolledIntoView(elem) {
+		// 	var docViewTop = $(window).scrollTop();
+		// 	var docViewBottom = docViewTop + $(window).height();
+
+		// 	var elemTop = $(elem).offset().top;
+		// 	var elemBottom = elemTop + $(elem).height();
+
+		// 	return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+		// }
+
+		// $(window).scroll(function (e) {
+		// 	var anchors = $('.container-fluid');
+		// 	for (var i = 0; i < anchors.length; ++i) {
+		// 		if (isScrolledIntoView(anchors[i])) {
+		// 			var href = $(anchors[i]).attr('id');
+		// 			location.hash = href.slice(href.indexOf('#') + 1);
+		// 			break;
+		// 		}
+		// 	}
+		// });
+
+		// $(function () {
+		// 	var hash = location.hash;
+		// 	if (hash) {
+		// 		// Scroll to the element with the given hash.
+		// 		var anchors = $('.container-fluid');
+		// 		for (var i = 0; i < anchors.length; ++i) {
+		// 			if ($(anchors[i]).attr('id') === hash) {
+		// 				$(window).scrollTop($(anchors[i]).offset().top);
+		// 				break;
+		// 			}
+		// 		}
+		// 	}
+		// });
 
 	</script>
 
@@ -122,6 +170,11 @@
 		.navbar-nav  li a:hover {
 			color: #1abc9c !important;
 		}
+		#zoom-box {
+			width:0;
+			height:0;
+		}
+
 		</style>
   </head>
 <body>
@@ -135,7 +188,7 @@
 	<div class="collapse navbar-collapse" id="navbarCollapse">
 	  <ul class="navbar-nav mr-auto">
 		<li class="nav-item active">
-		  <a class="nav-link" href="#about">About<span class="sr-only">(current)</span></a>
+		  <a class="nav-link" href="#about">About</a>
 		</li>
 		<li class="nav-item active">
 		  <a class="nav-link" href="#projects">Projects</a>
@@ -151,16 +204,16 @@
   </nav>
 
     <!--HOME-->
-	<div id="/" class="container-fluid bg-main text-center">
-        <div class="container centered border border-primary" style="max-width: 600px; margin-top: 125px; background-color: #ffffff; padding-top: 50px; padding-bottom: 50px; border-color: #1abc9c !important; border-width:2px !important;">
-            <h1 class="cover-heading" style="color: #474e5d !important;">Who is <strong style="color: #1abc9c !important;">Timmy Glynn</strong></h1>
-			<p class="lead" style="color: #474e5d !important;"><strong style="color: #1abc9c !important;">|</strong> Software Engineer <strong style="color: #1abc9c !important;">|</strong> Web Designer <strong style="color: #1abc9c !important;">|</strong> Blogger <strong style="color: #1abc9c !important;">|</strong> </p>
-            <p class="lead">
-            <a href="#about" class="btn btn-lg btn-secondary">Learn more</a>
+	<div id="home" class="container-fluid bg-main text-center">
+        <div id="zoom-box" class="container centered border border-primary" style="max-width: 500px !important; margin-top: 125px; background-color: #ffffff; padding-top: 50px; padding-bottom: 50px; border-color: #1abc9c !important; border-width:2px !important;">
+            <h1 class="intro cover-heading" style="color: #474e5d !important;">Who is <strong style="color: #1abc9c !important;">Timmy Glynn</strong></h1>
+			<p class="lead intro" style="color: #474e5d !important;"><strong style="color: #1abc9c !important;">|</strong> Software Engineer <strong style="color: #1abc9c !important;">|</strong> Web Designer <strong style="color: #1abc9c !important;">|</strong> Blogger <strong style="color: #1abc9c !important;">|</strong> </p>
+            <p class="lead intro">
+            <a href="#about" class="intro btn btn-lg btn-secondary">Learn more</a>
             </p>
         </div>
 	</div>
-	
+
 	<!--ABOUT-->
     <div id="about" class="container-fluid bg-2 text-center ">
       <div class="container bg-2 border border-primary" style="padding-top: 50px; padding-bottom: 50px; border-color: #1abc9c !important; border-width:2px !important;">
