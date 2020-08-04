@@ -63,6 +63,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+  position: relative !important;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -6858,7 +6859,7 @@ button.bg-dark:focus {
 
 .border-primary {
   border-color: #1abc9c !important;
-  
+
 }
 
 .border-secondary {
