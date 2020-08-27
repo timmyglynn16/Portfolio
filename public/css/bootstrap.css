@@ -2586,6 +2586,18 @@ fieldset:disabled a.btn {
   border-color: #0062cc;
 }
 
+.btn-section {
+  color: #474e5d !important;
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+.btn-section:hover {
+  color: #474e5d !important;
+  background-color: #1abc9c !important;
+  border-color: #1abc9c !important;
+}
+
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
   background-color: #0069d9;
@@ -2615,6 +2627,8 @@ fieldset:disabled a.btn {
   color: #fff!important;
   background-color: #474e5d!important;
   border-color: #474e5d !important;
+  position: relative;
+  bottom: 5px;
 }
 
 .btn-secondary:hover {
