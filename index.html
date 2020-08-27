@@ -22,12 +22,45 @@
 	<script src="public/js/custom.min.js"></script>
 
 	<script>
+
+		window.onload = fadeIn;
+
+		function fadeIn() {	
+			var fade = document.getElementById("zoom-box"); 
+			var line1= document.getElementById("line1")
+			var line2 = document.getElementById("line2")
+			var line3 = document.getElementById("line3")
+			var opacity = 0; 
+			var intervalID = setInterval(function() { 
+
+				if (opacity < 1) { 
+					opacity = opacity + 0.1
+					fade.style.opacity = opacity; 
+					line1.style.display = "none";
+					line2.style.display = "none";
+					line3.style.display = "none";
+				} else { 
+					clearInterval(intervalID); 
+				} 
+			}, 100); 
+
+			setTimeout(function() {			
+				$('.content').css('display', 'none');
+				$('.content').fadeIn(3000)
+			}, 1500);
+
+			setTimeout(function() {			
+				$('#line3').css('display', 'none');
+				$('#line3').fadeIn(2000) 
+			}, 3500);
+
+		}
+
 		(function ($) {
-		$(document).ready(function(){
-			
+		$(document).ready(function(){			
 			// hide .navbar first
 			$(".navbar").hide();
-			
+				
 			// fade in .navbar
 			$(function () {
 				$(window).scroll(function () {
@@ -37,44 +70,11 @@
 					} else {
 						$('.navbar').fadeOut();
 					}
-				});
-
-			
+				});	
 			});
-
 		});
 		}(jQuery));
 
-		$(document).ready(function(){
-			$('.intro2').css('display', 'none');
-			$('.intro2').fadeIn(2000)	
-
-			$('#zoom-box').animate({
-			width:'500px',
-			height:'250px',
-			top:'0',
-			left:'0',
-			}, 500);
-
-			$('.intro').css('display', 'none');
-			$('.intro').fadeIn(5000)	
-		});
-
-		// $(function () {
-		// 	var currentHash = "#home"
-		// 	$(document).scroll(function () {
-		// 		$('.hash').each(function () {
-		// 			var top = window.pageYOffset;
-		// 			var distance = top - $(this).offset().top;
-		// 			var hash = $(this).attr('href');
-
-		// 			if (distance < 30 && distance > -30 && currentHash != hash) {
-		// 				alert(hash);
-		// 				currentHash = hash;
-		// 			}
-		// 		});
-		// 	});
-		// });
 		$(function () {
 			var currentHash = "#home"
 			$(document).scroll(function () {
@@ -92,6 +92,7 @@
 			});
 		});
 
+
 	</script>
 
 	<style>
@@ -107,7 +108,13 @@
 			#ffffff 50%
 			);
 			height: 700px; 
+			/* background-size: 200% 100%;
+			background-position:right bottom;
+			transition:all 2s ease; */
 		}
+		/* .bg-main:hover{
+			background-position:left bottom;
+		} */
 		.bg-body {
 			background: repeating-linear-gradient(
 			45deg,
@@ -169,8 +176,50 @@
 			color: #1abc9c !important;
 		}
 		#zoom-box {
-			width:0;
-			height:0;
+			width: 60%;
+			height: 50%;
+			top: 0;
+			left: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		@media screen and (max-width: 500px) and (min-width: 260px){
+			#zoom-box {
+				width: 100%;
+				height:50%;
+				top:0;
+				left:0;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+		@keyframes slideInFromBottom {
+			0% {
+				transform: translateY(100%);
+			}
+			100% {
+				transform: translateY(0);
+			}
+		}
+		.slideUp {
+			animation: 1s ease-out 0s 1 slideInFromBottom;
+		}
+
+		@keyframes slideInFromLeft{
+			0% {
+				transform: translateX(-100%);
+			}
+			100% {
+				transform: translateX(0);
+			}
+		}
+		.slideLeft {
+			animation: 1s ease-out 0s 1 slideInFromLeft;
 		}
 
 		</style>
@@ -202,19 +251,19 @@
   </nav>
 
     <!--HOME-->
-	<div id="home" href="#home" class="hash intro2 container-fluid bg-main text-center">
-        <div id="zoom-box" class="container centered border border-primary" style="max-width: 500px !important; margin-top: 125px; background-color: #ffffff; padding-top: 50px; padding-bottom: 50px; border-color: #1abc9c !important; border-width:2px !important;">
-            <h1 class="intro cover-heading" style="color: #474e5d !important;">Who is <strong style="color: #1abc9c !important;">Timmy Glynn</strong></h1>
-			<p class="lead intro" style="color: #474e5d !important;"><strong style="color: #1abc9c !important;">|</strong> Software Engineer <strong style="color: #1abc9c !important;">|</strong> Web Designer <strong style="color: #1abc9c !important;">|</strong> Blogger <strong style="color: #1abc9c !important;">|</strong> </p>
-            <p class="lead intro">
-            <a href="#about" class="intro btn btn-lg btn-secondary">Learn more</a>
+	<div id="home" href="#home" class="hash container-fluid bg-main text-center">
+        <div id="zoom-box" class="container centered border border-primary" style="margin-top: 75px; background-color: #ffffff; padding-top: 50px; padding-bottom: 50px; border-color: #1abc9c !important; border-width:2px !important;">
+            <h1 id="line1" class="content cover-heading"><strong style="color: #1abc9c !important;">Timmy Glynn</strong></h1>
+			<p id="line2" class="lead content" style="color: #474e5d !important;"><strong style="color: #1abc9c !important;">|</strong> Software Engineer <strong style="color: #1abc9c !important;">|</strong> Web Designer <strong style="color: #1abc9c !important;">|</strong> Blogger <strong style="color: #1abc9c !important;">|</strong> </p>
             </p>
-        </div>
+		</div>
+		<p id="line3" class="lead slideUp loadBtn">
+            <a href="#about" class="btn btn-lg btn-secondary" style="margin-top: 50px">Learn more</a>
 	</div>
 
 	<!--ABOUT-->
     <div id="about" href="#about" class="hash container-fluid bg-2 text-center ">
-      <div class="container bg-2 border border-primary" style="padding-top: 50px; padding-bottom: 50px; border-color: #1abc9c !important; border-width:2px !important;">
+      <div class="slideRight container bg-2 border border-primary" style="padding-top: 50px; padding-bottom: 50px; border-color: #1abc9c !important; border-width:2px !important;">
 		  <h1 class="cover-heading" style="color: #1abc9c !important; padding-bottom: 50px;">About</h1>
 		  <div class="row">
 			  <div class="col-12">
