@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Timmy Glynn">
     <title>Timmy Glynn</title>
@@ -19,7 +19,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 	<!--- custom JavaScript-->
-	<script src="public/js/custom.min.js"></script>
+	<!-- <script src="public/js/custom.min.js"></script> -->
 
 	<script>
 
@@ -61,26 +61,26 @@
 
 			// If the screen is smaller then 840px wide remove all classes.
 			if ($(window).width() < breakpoint) {
-				$('.js-slidein').removeClass('js-slidein');
+				$('#js-slidein').removeClass('js-slidein');
 			}
 
 			// Check which of the elements with this class is visible on the page
-			$('.js-slidein').each(function (i) {
+			$('#js-slidein').each(function (i) {
 				var bottomObject = $(this).offset().top;
 				var bottomWindow = $(window).scrollTop() + $(window).height();
 
-				if (bottomWindow > bottomObject) {
+				if (bottomWindow > 1300) {
 					$(this).removeClass('js-slidein');
 				}
 			});
 
 			// Trigger the slide-in effect on scroll
 			$(window).scroll(function () {
-				$('.js-slidein').each(function (i) {
+				$('#js-slidein').each(function (i) {
 					var bottomObject = $(this).offset().top + $(this).outerHeight() / 3;
 					var bottomWindow = $(window).scrollTop() + $(window).height();
 
-					if (bottomWindow > bottomObject) {
+					if (bottomWindow > 1300) {
 						$(this).addClass('js-slidein-visible');
 					}
 				});
@@ -92,26 +92,26 @@
 
 			// If the screen is smaller then 840px wide remove all classes.
 			if ($(window).width() < breakpoint) {
-				$('.js-slidein2').removeClass('js-slidein2');
+				$('#js-slidein2').removeClass('js-slidein2');
 			}
 
 			// Check which of the elements with this class is visible on the page
-			$('.js-slidein2').each(function (i) {
+			$('#js-slidein2').each(function (i) {
 				var bottomObject = $(this).offset().top;
 				var bottomWindow = $(window).scrollTop() + $(window).height();
 
-				if (bottomWindow > bottomObject) {
+				if (bottomWindow > 2000) {
 					$(this).removeClass('js-slidein2');
 				}
 			});
 
 			// Trigger the slide-in effect on scroll
 			$(window).scroll(function () {
-				$('.js-slidein2').each(function (i) {
+				$('#js-slidein2').each(function (i) {
 					var bottomObject = $(this).offset().top + $(this).outerHeight() / 3;
 					var bottomWindow = $(window).scrollTop() + $(window).height();
 
-					if (bottomWindow > bottomObject) {
+					if (bottomWindow > 2000) {
 						$(this).addClass('js-slidein2-visible');
 					}
 				});
@@ -123,11 +123,11 @@
 
 			// If the screen is smaller then 840px wide remove all classes.
 			if ($(window).width() < breakpoint) {
-				$('.js-slidein-content').removeClass('js-slidein-content');
+				$('#js-slidein-content').removeClass('js-slidein-content');
 			}
 
 			// Check which of the elements with this class is visible on the page
-			$('.js-slidein-content').each(function (i) {
+			$('#js-slidein-content').each(function (i) {
 				var bottomObject = $(this).offset().top;
 				var bottomWindow = $(window).scrollTop() + $(window).height();
 
@@ -138,7 +138,7 @@
 
 			// Trigger the slide-in effect on scroll
 			$(window).scroll(function () {
-				$('.js-slidein-content').each(function (i) {
+				$('#js-slidein-content').each(function (i) {
 					var bottomObject = $(this).offset().top + $(this).outerHeight() / 3;
 					var bottomWindow = $(window).scrollTop() + $(window).height();
 
@@ -154,26 +154,26 @@
 
 			// If the screen is smaller then 840px wide remove all classes.
 			if ($(window).width() < breakpoint) {
-				$('.js-slidein-content2').removeClass('js-slidein-content2');
+				$('#js-slidein-content2').removeClass('js-slidein-content2');
 			}
 
 			// Check which of the elements with this class is visible on the page
-			$('.js-slidein-content2').each(function (i) {
+			$('#js-slidein-content2').each(function (i) {
 				var bottomObject = $(this).offset().top;
 				var bottomWindow = $(window).scrollTop() + $(window).height();
 
-				if (bottomWindow > bottomObject) {
+				if (bottomWindow > 1300) {
 					$(this).removeClass('js-slidein-content2');
 				}
 			});
 
 			// Trigger the slide-in effect on scroll
 			$(window).scroll(function () {
-				$('.js-slidein-content2').each(function (i) {
+				$('#js-slidein-content2').each(function (i) {
 					var bottomObject = $(this).offset().top + $(this).outerHeight() / 3;
 					var bottomWindow = $(window).scrollTop() + $(window).height();
 
-					if (bottomWindow > bottomObject) {
+					if (bottomWindow > 1300) {
 						$(this).addClass('js-slidein-content2-visible');
 					}
 				});
@@ -185,11 +185,11 @@
 
 			// If the screen is smaller then 840px wide remove all classes.
 			if ($(window).width() < breakpoint) {
-				$('.js-slidein-content3').removeClass('js-slidein-content3');
+				$('#js-slidein-content3').removeClass('js-slidein-content3');
 			}
 
 			// Check which of the elements with this class is visible on the page
-			$('.js-slidein-content3').each(function (i) {
+			$('#js-slidein-content3').each(function (i) {
 				var bottomObject = $(this).offset().top;
 				var bottomWindow = $(window).scrollTop() + $(window).height();
 
@@ -200,7 +200,7 @@
 
 			// Trigger the slide-in effect on scroll
 			$(window).scroll(function () {
-				$('.js-slidein-content3').each(function (i) {
+				$('#js-slidein-content3').each(function (i) {
 					var bottomObject = $(this).offset().top + $(this).outerHeight() / 3;
 					var bottomWindow = $(window).scrollTop() + $(window).height();
 
@@ -216,11 +216,11 @@
 
 			// If the screen is smaller then 840px wide remove all classes.
 			if ($(window).width() < breakpoint) {
-				$('.js-slidein-content4').removeClass('js-slidein-content4');
+				$('#js-slidein-content4').removeClass('js-slidein-content4');
 			}
 
 			// Check which of the elements with this class is visible on the page
-			$('.js-slidein-content4').each(function (i) {
+			$('#js-slidein-content4').each(function (i) {
 				var bottomObject = $(this).offset().top;
 				var bottomWindow = $(window).scrollTop() + $(window).height();
 
@@ -231,12 +231,105 @@
 
 			// Trigger the slide-in effect on scroll
 			$(window).scroll(function () {
-				$('.js-slidein-content4').each(function (i) {
+				$('#js-slidein-content4').each(function (i) {
 					var bottomObject = $(this).offset().top + $(this).outerHeight() / 3;
 					var bottomWindow = $(window).scrollTop() + $(window).height();
 
 					if (bottomWindow > bottomObject) {
 						$(this).addClass('js-slidein-content4-visible');
+					}
+				});
+			});
+		});
+
+		$(document).ready(function () {
+			var breakpoint = 840;
+
+			// If the screen is smaller then 840px wide remove all classes.
+			if ($(window).width() < breakpoint) {
+				$('#js-slidein-content2-a').removeClass('js-slidein-content2-a');
+			}
+
+			// Check which of the elements with this class is visible on the page
+			$('#js-slidein-content2-a').each(function (i) {
+				var bottomObject = $(this).offset().top;
+				var bottomWindow = $(window).scrollTop() + $(window).height();
+
+				if (bottomWindow > bottomObject) {
+					$(this).removeClass('js-slidein-content2-a');
+				}
+			});
+
+			// Trigger the slide-in effect on scroll
+			$(window).scroll(function () {
+				$('#js-slidein-content2-a').each(function (i) {
+					var bottomObject = $(this).offset().top + $(this).outerHeight() / 3;
+					var bottomWindow = $(window).scrollTop() + $(window).height();
+
+					if (bottomWindow > bottomObject) {
+						$(this).addClass('js-slidein-content2-a-visible');
+					}
+				});
+			});
+		});
+
+		$(document).ready(function () {
+			var breakpoint = 840;
+
+			// If the screen is smaller then 840px wide remove all classes.
+			if ($(window).width() < breakpoint) {
+				$('#js-slidein-content3-a').removeClass('js-slidein-content3-a');
+			}
+
+			// Check which of the elements with this class is visible on the page
+			$('#js-slidein-content3-a').each(function (i) {
+				var bottomObject = $(this).offset().top;
+				var bottomWindow = $(window).scrollTop() + $(window).height();
+
+				if (bottomWindow > bottomObject) {
+					$(this).removeClass('js-slidein-content3-a');
+				}
+			});
+
+			// Trigger the slide-in effect on scroll
+			$(window).scroll(function () {
+				$('#js-slidein-content3-a').each(function (i) {
+					var bottomObject = $(this).offset().top + $(this).outerHeight() / 3;
+					var bottomWindow = $(window).scrollTop() + $(window).height();
+
+					if (bottomWindow > bottomObject) {
+						$(this).addClass('js-slidein-content3-a-visible');
+					}
+				});
+			});
+		});
+
+		$(document).ready(function () {
+			var breakpoint = 840;
+
+			// If the screen is smaller then 840px wide remove all classes.
+			if ($(window).width() < breakpoint) {
+				$('#js-slidein-content4-a').removeClass('js-slidein-content4-a');
+			}
+
+			// Check which of the elements with this class is visible on the page
+			$('#js-slidein-content4-a').each(function (i) {
+				var bottomObject = $(this).offset().top;
+				var bottomWindow = $(window).scrollTop() + $(window).height();
+
+				if (bottomWindow > bottomObject) {
+					$(this).removeClass('js-slidein-content4-a');
+				}
+			});
+
+			// Trigger the slide-in effect on scroll
+			$(window).scroll(function () {
+				$('#js-slidein-content4-a').each(function (i) {
+					var bottomObject = $(this).offset().top + $(this).outerHeight() / 3;
+					var bottomWindow = $(window).scrollTop() + $(window).height();
+
+					if (bottomWindow > bottomObject) {
+						$(this).addClass('js-slidein-content4-a-visible');
 					}
 				});
 			});
@@ -362,8 +455,8 @@
 			color: #1abc9c !important;
 		}
 		#zoom-box {
-			width: 60%;
-			height: 50%;
+			width: 40%;
+			height: 40%;
 			top: 0;
 			left: 0;
 			display: flex;
@@ -383,6 +476,10 @@
 				justify-content: center;
 				align-items: center;
 			}
+
+			#navbar{
+				display:none;
+			}
 		}
 		@keyframes slideInFromBottom {
 			0% {
@@ -396,7 +493,7 @@
 			animation: 1s ease-out 0s 1 slideInFromBottom;
 		}
 
-		/* @keyframes slideInFromLeft{
+		@keyframes slideInFromLeft{
 			0% {
 				transform: translateX(-100%);
 			}
@@ -406,82 +503,258 @@
 		}
 		.slideLeft {
 			animation: 1s ease-out 0s 1 slideInFromLeft;
-		} */
-
-		.js-slidein {
-			opacity: 0;
-			transform: translateX(-700px);
-			-webkit-transition: all 2000ms ease-in-out;
-			transition: all 2000ms ease-in-out;
 		}
 
-		.js-slidein-visible {
-			opacity: 1 !important;
-			transform: translateX(0) !important;
-		}
+		/* #js-slidein {
+				opacity: 0;
+				transform: translateX(-700px);
+				-ms-transition: all 2000ms ease-in-out;
+				-webkit-transition: all 2000ms ease-in-out;
+				transition: all 2000ms ease-in-out;
+			}
 
-		.js-slidein2 {
-			opacity: 0;
-			transform: translateX(-1400px);
-			-webkit-transition: all 2000ms ease-in-out;
-			transition: all 2000ms ease-in-out;
-		}
+			.js-slidein-visible {
+				opacity: 1 !important;
+				transform: translateX(0) !important;
+			}
 
-		.js-slidein2-visible {
-			opacity: 1 !important;
-			transform: translateX(0) !important;
-		}
+			#js-slidein2 {
+				opacity: 0;
+				transform: translateX(-1400px);
+				-ms-transition: all 3000ms ease-in-out;
+				-webkit-transition: all 2000ms ease-in-out;
+				transition: all 2000ms ease-in-out;
+			}
 
-		.js-slidein-content {
-			opacity: 0;
-			transform: translateY(100px);
-			-webkit-transition: all 1500ms ease-in-out;
-			transition: all 1500ms ease-in-out;
-		}
+			.js-slidein2-visible {
+				opacity: 1 !important;
+				transform: translateX(0) !important;
+			}
 
-		.js-slidein-content-visible {
-			opacity: 1 !important;
-			transform: translateY(0) !important;
-		}
+			#js-slidein-content {
+				opacity: 0;
+				transform: translateY(100px);
+				-ms-transition: all 1500ms ease-in-out;
+				-webkit-transition: all 1500ms ease-in-out;
+				transition: all 1500ms ease-in-out;
+			}
 
-		.js-slidein-content2 {
-			opacity: 0;
-			transform: translateY(100px);
-			-webkit-transition: all 1500ms ease-in-out;
-			transition: all 1500ms ease-in-out;
-		}
+			.js-slidein-content-visible {
+				opacity: 1 !important;
+				transform: translateY(0) !important;
+			}
 
-		.js-slidein-content2-visible {
-			opacity: 1 !important;
-			transform: translateY(0) !important;
-			transition-delay: 500ms;
-		}
+			#js-slidein-content2 {
+				opacity: 0;
+				transform: translateY(100px);
+				-ms-transition: all 3000ms ease-in-out;
+				-webkit-transition: all 1500ms ease-in-out;
+				transition: all 1500ms ease-in-out;
+			}
 
-		.js-slidein-content3 {
-			opacity: 0;
-			transform: translateY(100px);
-			-webkit-transition: all 1500ms ease-in-out;
-			transition: all 1500ms ease-in-out;
-		}
+			.js-slidein-content2-visible {
+				opacity: 1 !important;
+				transform: translateY(0) !important;
+				transition-delay: 500ms;
+			}
 
-		.js-slidein-content3-visible {
-			opacity: 1 !important;
-			transform: translateY(0) !important;
-			transition-delay: 1000ms;
-		}
+			#js-slidein-content3 {
+				opacity: 0;
+				transform: translateY(100px);
+				-ms-transition: all 3000ms ease-in-out;
+				-webkit-transition: all 1500ms ease-in-out;
+				transition: all 1500ms ease-in-out;
+			}
 
-		.js-slidein-content4 {
-			opacity: 0;
-			transform: translateY(100px);
-			-webkit-transition: all 1500ms ease-in-out;
-			transition: all 1500ms ease-in-out;
-		}
+			.js-slidein-content3-visible {
+				opacity: 1 !important;
+				transform: translateY(0) !important;
+				transition-delay: 1000ms;
+			}
 
-		.js-slidein-content4-visible {
-			opacity: 1 !important;
-			transform: translateY(0) !important;
-			transition-delay: 1500ms;
-		}
+			#js-slidein-content4 {
+				opacity: 0;
+				transform: translateY(100px);
+				-ms-transition: all 3000ms ease-in-out;
+				-webkit-transition: all 1500ms ease-in-out;
+				transition: all 1500ms ease-in-out;
+			}
+
+			.js-slidein-content4-visible {
+				opacity: 1 !important;
+				transform: translateY(0) !important;
+				transition-delay: 1500ms;
+			}
+
+			#js-slidein-content2-a {
+				opacity: 0;
+				transform: translateY(100px);
+				-ms-transition: all 3000ms ease-in-out;
+				-webkit-transition: all 1500ms ease-in-out;
+				transition: all 1500ms ease-in-out;
+			}
+
+			.js-slidein-content2-a-visible {
+				opacity: 1 !important;
+				transform: translateY(0) !important;
+				transition-delay: 500ms;
+			}
+
+			#js-slidein-content3-a {
+				opacity: 0;
+				transform: translateY(100px);
+				-ms-transition: all 3000ms ease-in-out;
+				-webkit-transition: all 1500ms ease-in-out;
+				transition: all 1500ms ease-in-out;
+			}
+
+			.js-slidein-content3-a-visible {
+				opacity: 1 !important;
+				transform: translateY(0) !important;
+				transition-delay: 1000ms;
+			}
+
+			#js-slidein-content4-a {
+				opacity: 0;
+				transform: translateY(100px);
+				-ms-transition: all 3000ms ease-in-out;
+				-webkit-transition: all 1500ms ease-in-out;
+				transition: all 1500ms ease-in-out;
+			}
+
+			.js-slidein-content4-a-visible {
+				opacity: 1 !important;
+				transform: translateY(0) !important;
+				transition-delay: 1500ms;
+			}
+
+		@media screen and (max-width: 500px) and (min-width: 260px){ */
+			#js-slidein {
+				opacity: 0;
+				transform: translateX(-700px);
+				-ms-transition: all 1000ms ease-in-out;
+				-webkit-transition: all 1000ms ease-in-out;
+				transition: all 1000ms ease-in-out;
+			}
+
+			.js-slidein-visible {
+				opacity: 1 !important;
+				transform: translateX(0) !important;
+			}
+
+			#js-slidein2 {
+				opacity: 0;
+				transform: translateX(-1400px);
+				-ms-transition: all 2000ms ease-in-out;
+				-webkit-transition: all 2000ms ease-in-out;
+				transition: all 2000ms ease-in-out;
+			}
+
+			.js-slidein2-visible {
+				opacity: 1 !important;
+				transform: translateX(0) !important;
+			}
+
+			#js-slidein-content {
+				opacity: 0;
+				transform: translateY(100px);
+				-ms-transition: all 1500ms ease-in-out;
+				-webkit-transition: all 1500ms ease-in-out;
+				transition: all 1500ms ease-in-out;
+			}
+
+			.js-slidein-content-visible {
+				opacity: 1 !important;
+				transform: translateY(0) !important;
+			}
+
+			#js-slidein-content2 {
+				opacity: 0;
+				transform: translateY(100px);
+				-ms-transition: all 1500ms ease-in-out;
+				-webkit-transition: all 1500ms ease-in-out;
+				transition: all 1500ms ease-in-out;
+			}
+
+			.js-slidein-content2-visible {
+				opacity: 1 !important;
+				transform: translateY(0) !important;
+				transition-delay: 500ms;
+			}
+
+			#js-slidein-content3 {
+				opacity: 0;
+				transform: translateY(100px);
+				-ms-transition: all 1500ms ease-in-out;
+				-webkit-transition: all 1500ms ease-in-out;
+				transition: all 1500ms ease-in-out;
+			}
+
+			.js-slidein-content3-visible {
+				opacity: 1 !important;
+				transform: translateY(0) !important;
+				transition-delay: 1000ms;
+			}
+
+			#js-slidein-content4 {
+				opacity: 0;
+				transform: translateY(100px);
+				-ms-transition: all 1500ms ease-in-out;
+				-webkit-transition: all 1500ms ease-in-out;
+				transition: all 1500ms ease-in-out;
+			}
+
+			.js-slidein-content4-visible {
+				opacity: 1 !important;
+				transform: translateY(0) !important;
+				transition-delay: 1500ms;
+			}
+
+			#js-slidein-content2-a {
+				opacity: 0;
+				transform: translateY(100px);
+				-ms-transition: all 1500ms ease-in-out;
+				-webkit-transition: all 1500ms ease-in-out;
+				transition: all 1500ms ease-in-out;
+			}
+
+			.js-slidein-content2-a-visible {
+				opacity: 1 !important;
+				transform: translateY(0) !important;
+				transition-delay: 500ms;
+			}
+
+			#js-slidein-content3-a {
+				opacity: 0;
+				transform: translateY(100px);
+				-ms-transition: all 1500ms ease-in-out;
+				-webkit-transition: all 1500ms ease-in-out;
+				transition: all 1500ms ease-in-out;
+			}
+
+			.js-slidein-content3-a-visible {
+				opacity: 1 !important;
+				transform: translateY(0) !important;
+				transition-delay: 1000ms;
+			}
+
+			#js-slidein-content4-a {
+				opacity: 0;
+				transform: translateY(100px);
+				-ms-transition: all 1500ms ease-in-out;
+				-webkit-transition: all 1500ms ease-in-out;
+				transition: all 1500ms ease-in-out;
+			}
+
+			.js-slidein-content4-a-visible {
+				opacity: 1 !important;
+				transform: translateY(0) !important;
+				transition-delay: 1500ms;
+			}
+		
+		
+
+		
 
 
 		</style>
@@ -525,24 +798,24 @@
 
 	<!--ABOUT-->
     <div id="about" href="#about" class="hash container-fluid bg-2 text-center ">
-      <div class="js-slidein container bg-2 border border-primary" style="padding-top: 50px; padding-bottom: 50px; border-color: #1abc9c !important; border-width:2px !important;">
+      <div id="js-slidein" class="js-slidein container bg-2 border border-primary" style="padding-top: 50px; padding-bottom: 50px; border-color: #1abc9c !important; border-width:2px !important;">
 		  <h1 class="cover-heading" style="color: #1abc9c !important; padding-bottom: 50px;">About</h1>
-		  <div class="js-slidein-content2 row">
-			  <div class="col-12">
+		  <div class="row">
+			  <div id="js-slidein-content2 "class="js-slidein-content2 col-12">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				  </p>
 			  </div>
 		  </div>
-		  <div class="js-slidein-content3 row">
-			<div class="js-slidein-content col-sm-6">
+		  <div class="row">
+			<div id="js-slidein-content3"class="js-slidein-content3 col-sm-6">
 				<h2>Test</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			  </div>
-			  <div class="js-slidein-content4 col-sm-6">
+			  <div id="js-slidein-content4" class="js-slidein-content4 col-sm-6">
 				<h2>Test</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -558,22 +831,22 @@
 
    <!--PROJECTS-->
     <div id="projects" href="#projects" class="hash container-fluid bg-3 text-center">
-      <div class="js-slidein container">
+      <div id="js-slidein2" class="js-slidein2 container">
 		  <h1 class=" cover-heading" style="color: #1abc9c !important; padding-bottom: 50px;">Projects</h1>
 		  <div class="row">
-			<div class="js-slidein-content2 col-sm-4">
+			<div id="js-slidein-content2-a" class="js-slidein-content2-a col-sm-4">
+				<h2>Test</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<p>Lorem ipsum dolor sit amet,co nsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			  </div>
+			  <div id="js-slidein-content3-a" class="js-slidein-content3-a col-sm-4">
 				<h2>Test</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			  </div>
-			  <div class="js-slidein-content3 col-sm-4">
-				<h2>Test</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			  </div>
-			  <div class="js-slidein-content4 col-sm-4">
+			  <div id="js-slidein-content4-a" class="js-slidein-content4-a col-sm-4">
 				<h2>Test</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
