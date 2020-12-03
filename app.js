@@ -1,8 +1,6 @@
 const path = require('path');
-//const expressEdge = require('express-edge'); // outdated?
-const { config, engine } = require('express-edge');
 const express = require('express');
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const fileUpload = require("express-fileupload");
 // const Post = require('./backend/database/db-models/Post');
@@ -20,7 +18,6 @@ const app = new express();
 
 app.use(express.static(__dirname + '/public'));
 app.use(fileUpload());
-app.use(engine);
 
 
 app.use(bodyParser.json())
