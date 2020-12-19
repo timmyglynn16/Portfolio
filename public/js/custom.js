@@ -44,7 +44,7 @@ $(document).ready(function () {
 		var bottomObject = $(this).offset().top;
 		var bottomWindow = $(window).scrollTop() + $(window).height();
 
-		if (bottomWindow > 1300) {
+		if (bottomWindow > bottomObject) {
 			$(this).removeClass('js-slidein');
 		}
 	});
@@ -75,7 +75,7 @@ $(document).ready(function () {
 		var bottomObject = $(this).offset().top;
 		var bottomWindow = $(window).scrollTop() + $(window).height();
 
-		if (bottomWindow > 2000) {
+		if (bottomWindow > bottomObject) {
 			$(this).removeClass('js-slidein2');
 		}
 	});
@@ -86,7 +86,7 @@ $(document).ready(function () {
 			var bottomObject = $(this).offset().top + $(this).outerHeight() / 3;
 			var bottomWindow = $(window).scrollTop() + $(window).height();
 
-			if (bottomWindow > 2000) {
+			if (bottomWindow > bottomObject) {
 				$(this).addClass('js-slidein2-visible');
 			}
 		});
@@ -137,7 +137,7 @@ $(document).ready(function () {
 		var bottomObject = $(this).offset().top;
 		var bottomWindow = $(window).scrollTop() + $(window).height();
 
-		if (bottomWindow > 1300) {
+		if (bottomWindow > bottomObject) {
 			$(this).removeClass('js-slidein-content2');
 		}
 	});
@@ -148,7 +148,7 @@ $(document).ready(function () {
 			var bottomObject = $(this).offset().top + $(this).outerHeight() / 3;
 			var bottomWindow = $(window).scrollTop() + $(window).height();
 
-			if (bottomWindow > 1300) {
+			if (bottomWindow > bottomObject) {
 				$(this).addClass('js-slidein-content2-visible');
 			}
 		});
@@ -248,6 +248,7 @@ $(document).ready(function () {
 	});
 });
 
+
 $(document).ready(function () {
 	var breakpoint = 840;
 
@@ -305,6 +306,68 @@ $(document).ready(function () {
 
 			if (bottomWindow > bottomObject) {
 				$(this).addClass('js-slidein-content4-a-visible');
+			}
+		});
+	});
+});
+
+$(document).ready(function () {
+	var breakpoint = 840;
+
+	// If the screen is smaller then 840px wide remove all classes.
+	if ($(window).width() < breakpoint) {
+		$('#js-slidein-content3-b').removeClass('js-slidein-content3-b');
+	}
+
+	// Check which of the elements with this class is visible on the page
+	$('#js-slidein-content3-b').each(function (i) {
+		var bottomObject = $(this).offset().top;
+		var bottomWindow = $(window).scrollTop() + $(window).height();
+
+		if (bottomWindow > bottomObject) {
+			$(this).removeClass('js-slidein-content3-b');
+		}
+	});
+
+	// Trigger the slide-in effect on scroll
+	$(window).scroll(function () {
+		$('#js-slidein-content3-b').each(function (i) {
+			var bottomObject = $(this).offset().top + $(this).outerHeight() / 3;
+			var bottomWindow = $(window).scrollTop() + $(window).height();
+
+			if (bottomWindow > bottomObject) {
+				$(this).addClass('js-slidein-content3-b-visible');
+			}
+		});
+	});
+});
+
+$(document).ready(function () {
+	var breakpoint = 840;
+
+	// If the screen is smaller then 840px wide remove all classes.
+	if ($(window).width() < breakpoint) {
+		$('#js-slidein-content4-b').removeClass('js-slidein-content4-b');
+	}
+
+	// Check which of the elements with this class is visible on the page
+	$('#js-slidein-content4-b').each(function (i) {
+		var bottomObject = $(this).offset().top;
+		var bottomWindow = $(window).scrollTop() + $(window).height();
+
+		if (bottomWindow > bottomObject) {
+			$(this).removeClass('js-slidein-content4-b');
+		}
+	});
+
+	// Trigger the slide-in effect on scroll
+	$(window).scroll(function () {
+		$('#js-slidein-content4-b').each(function (i) {
+			var bottomObject = $(this).offset().top + $(this).outerHeight() / 3;
+			var bottomWindow = $(window).scrollTop() + $(window).height();
+
+			if (bottomWindow > bottomObject) {
+				$(this).addClass('js-slidein-content4-b-visible');
 			}
 		});
 	});

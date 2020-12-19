@@ -139,13 +139,12 @@ animation: 1s ease-out 0s 1 slideInFromBottom;
 animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
-@media screen and (max-width: 500px) and (min-width: 260px){ 
 #js-slidein {
   opacity: 0;
   transform: translateX(-700px);
-  -ms-transition: all 1000ms ease-in-out;
-  -webkit-transition: all 1000ms ease-in-out;
-  transition: all 1000ms ease-in-out;
+  -ms-transition: all 2000ms ease-in-out;
+  -webkit-transition: all 2000ms ease-in-out;
+  transition: all 2000ms ease-in-out;
 }
 
 .js-slidein-visible {
@@ -156,9 +155,9 @@ animation: 1s ease-out 0s 1 slideInFromLeft;
 #js-slidein2 {
   opacity: 0;
   transform: translateX(-1400px);
-  -ms-transition: all 2000ms ease-in-out;
-  -webkit-transition: all 2000ms ease-in-out;
-  transition: all 2000ms ease-in-out;
+  -ms-transition: all 1500ms ease-in-out;
+  -webkit-transition: all 1500ms ease-in-out;
+  transition: all 1500ms ease-in-out;
 }
 
 .js-slidein2-visible {
@@ -169,56 +168,54 @@ animation: 1s ease-out 0s 1 slideInFromLeft;
 #js-slidein-content {
   opacity: 0;
   transform: translateY(100px);
-  -ms-transition: all 1500ms ease-in-out;
-  -webkit-transition: all 1500ms ease-in-out;
-  transition: all 1500ms ease-in-out;
+  -ms-transition: all 3000ms ease-in-out;
+  -webkit-transition: all 3000ms ease-in-out;
+  transition: all 3000ms ease-in-out;
 }
 
 .js-slidein-content-visible {
   opacity: 1 !important;
   transform: translateY(0) !important;
+  transition-delay: 100ms;
 }
 
 #js-slidein-content2 {
   opacity: 0;
   transform: translateY(100px);
-  -ms-transition: all 1500ms ease-in-out;
-  -webkit-transition: all 1500ms ease-in-out;
-  transition: all 1500ms ease-in-out;
+  -ms-transition: all 2000ms ease-in-out;
+  -webkit-transition: all 2000ms ease-in-out;
+  transition: all 2000ms ease-in-out;
 }
 
 .js-slidein-content2-visible {
   opacity: 1 !important;
   transform: translateY(0) !important;
-  transition-delay: 500ms;
 }
 
 #js-slidein-content3 {
   opacity: 0;
   transform: translateY(100px);
-  -ms-transition: all 1500ms ease-in-out;
-  -webkit-transition: all 1500ms ease-in-out;
-  transition: all 1500ms ease-in-out;
+  -ms-transition: all 2000ms ease-in-out;
+  -webkit-transition: all 2000ms ease-in-out;
+  transition: all 2000ms ease-in-out;
 }
 
 .js-slidein-content3-visible {
   opacity: 1 !important;
   transform: translateY(0) !important;
-  transition-delay: 1000ms;
 }
 
 #js-slidein-content4 {
   opacity: 0;
   transform: translateY(100px);
-  -ms-transition: all 1500ms ease-in-out;
-  -webkit-transition: all 1500ms ease-in-out;
-  transition: all 1500ms ease-in-out;
+  -ms-transition: all 2500ms ease-in-out;
+  -webkit-transition: all 2500ms ease-in-out;
+  transition: all 2500ms ease-in-out;
 }
 
 .js-slidein-content4-visible {
   opacity: 1 !important;
   transform: translateY(0) !important;
-  transition-delay: 1500ms;
 }
 
 #js-slidein-content2-a {
@@ -261,4 +258,182 @@ animation: 1s ease-out 0s 1 slideInFromLeft;
   opacity: 1 !important;
   transform: translateY(0) !important;
   transition-delay: 1500ms;
+}
+
+#js-slidein-content3-b {
+  opacity: 0;
+  transform: translateY(100px);
+  -ms-transition: all 2000ms ease-in-out;
+  -webkit-transition: all 2000ms ease-in-out;
+  transition: all 2000ms ease-in-out;
+}
+
+.js-slidein-content3-b-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition-delay: 1500ms;
+}
+
+#js-slidein-content4-b {
+  opacity: 0;
+  transform: translateY(100px);
+  -ms-transition: all 2500ms ease-in-out;
+  -webkit-transition: all 2500ms ease-in-out;
+  transition: all 2500ms ease-in-out;
+}
+
+.js-slidein-content4-b-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition-delay: 1500ms;
+}
+
+@media screen and (max-width: 500px) and (min-width: 260px){ 
+  #js-slidein {
+    opacity: 0;
+    transform: translateX(-700px);
+    -ms-transition: all 2000ms ease-in-out;
+    -webkit-transition: all 2000ms ease-in-out;
+    transition: all 2000ms ease-in-out;
+  }
+  
+  .js-slidein-visible {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+  }
+  
+  #js-slidein2 {
+    opacity: 0;
+    transform: translateX(-700px);
+    -ms-transition: all 1500ms ease-in-out;
+    -webkit-transition: all 1500ms ease-in-out;
+    transition: all 1500ms ease-in-out;
+  }
+  
+  .js-slidein2-visible {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+  }
+  
+  #js-slidein-content {
+    opacity: 0;
+    transform: translateY(100px);
+    -ms-transition: all 1500ms ease-in-out;
+    -webkit-transition: all 1500ms ease-in-out;
+    transition: all 1500ms ease-in-out;
+  }
+  
+  .js-slidein-content-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  #js-slidein-content2 {
+    opacity: 0;
+    transform: translateY(100px);
+    -ms-transition: all 2000ms ease-in-out;
+    -webkit-transition: all 2000ms ease-in-out;
+    transition: all 2000ms ease-in-out;
+  }
+  
+  .js-slidein-content2-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  #js-slidein-content3 {
+    opacity: 0;
+    transform: translateY(100px);
+    -ms-transition: all 2000ms ease-in-out;
+    -webkit-transition: all 2000ms ease-in-out;
+    transition: all 2000ms ease-in-out;
+  }
+  
+  .js-slidein-content3-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  #js-slidein-content4 {
+    opacity: 0;
+    transform: translateY(100px);
+    -ms-transition: all 2500ms ease-in-out;
+    -webkit-transition: all 2500ms ease-in-out;
+    transition: all 2500ms ease-in-out;
+  }
+  
+  .js-slidein-content4-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  #js-slidein-content2-a {
+    opacity: 0;
+    transform: translateY(100px);
+    -ms-transition: all 1500ms ease-in-out;
+    -webkit-transition: all 1500ms ease-in-out;
+    transition: all 1500ms ease-in-out;
+  }
+
+  .js-slidein-content2-a-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition-delay: 500ms;
+  }
+
+  #js-slidein-content3-a {
+    opacity: 0;
+    transform: translateY(100px);
+    -ms-transition: all 1500ms ease-in-out;
+    -webkit-transition: all 1500ms ease-in-out;
+    transition: all 1500ms ease-in-out;
+  }
+
+  .js-slidein-content3-a-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition-delay: 1000ms;
+  }
+
+  #js-slidein-content4-a {
+    opacity: 0;
+    transform: translateY(100px);
+    -ms-transition: all 1500ms ease-in-out;
+    -webkit-transition: all 1500ms ease-in-out;
+    transition: all 1500ms ease-in-out;
+  }
+
+  .js-slidein-content4-a-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition-delay: 1500ms;
+  }
+
+  #js-slidein-content3-b {
+    opacity: 0;
+    transform: translateY(100px);
+    -ms-transition: all 1500ms ease-in-out;
+    -webkit-transition: all 1500ms ease-in-out;
+    transition: all 1500ms ease-in-out;
+  }
+
+  .js-slidein-content3-b-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition-delay: 1000ms;
+  }
+
+  #js-slidein-content4-b {
+    opacity: 0;
+    transform: translateY(100px);
+    -ms-transition: all 1500ms ease-in-out;
+    -webkit-transition: all 1500ms ease-in-out;
+    transition: all 1500ms ease-in-out;
+  }
+
+  .js-slidein-content4-b-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition-delay: 1500ms;
+  }
 }
