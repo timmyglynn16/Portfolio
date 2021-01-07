@@ -88,6 +88,12 @@ letter-spacing: 3px;
 color: #1abc9c !important;
 }
 
+@media screen and (max-width: 500px) and (min-width: 260px){ 
+  .navbar{
+      display:none !important;
+  }
+}
+
 #zoom-box {
 width: 40%;
 height: 50%;
@@ -291,7 +297,7 @@ animation: 1s ease-out 0s 1 slideInFromLeft;
 @media screen and (max-width: 500px) and (min-width: 260px){ 
   #js-slidein {
     opacity: 0;
-    transform: translateX(-700px);
+    transform: translateX(-350px);
     -ms-transition: all 2000ms ease-in-out;
     -webkit-transition: all 2000ms ease-in-out;
     transition: all 2000ms ease-in-out;
