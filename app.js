@@ -14,7 +14,7 @@ const app = new express();
 //     .then(() => 'You are now connected to Mongo!')
 //     .catch(err => console.error('Something went wrong', err))
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('public'));
 app.use(fileUpload());
 
 
@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'public/index.html'));
+    res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });
 
 
