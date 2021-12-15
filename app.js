@@ -1,9 +1,7 @@
 const path = require('path');
 const express = require('express');
-// const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const fileUpload = require("express-fileupload");
-// const Post = require('./backend/database/db-models/Post');
 
 const app = new express();
 
@@ -26,17 +24,17 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'public/index.html'));
 });
 
 
 
 // for cloud 
-// app.listen(8080, () => {
-//     console.log('App listening on port 8080')
-// });
+app.listen(5000, () => {
+    console.log('App listening on port 5000')
+});
 
 // for local testing 
-app.listen(4000, () => {
-    console.log('App listening on port 4000')
-});
+// app.listen(4000, () => {
+//     console.log('App listening on port 4000')
+// });
